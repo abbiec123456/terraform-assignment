@@ -1,3 +1,14 @@
-variable "vpc_cidr" {}
-variable "public_subnets" {}
-variable "private_subnets" {}
+variable "vpc_cidr" {
+  description = "CIDR block for the VPC"
+  type        = string
+}
+
+variable "public_subnets" {
+  description = "Public subnet CIDRs"
+  type        = map(string)
+}
+
+variable "private_subnets" {
+  description = "Private subnet CIDRs"
+  type        = map(string)
+}
