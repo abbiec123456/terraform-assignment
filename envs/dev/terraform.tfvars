@@ -10,6 +10,6 @@ private_subnets = {
   "1" = "10.0.20.0/24"
 }
 
-image_id        = "" # leave blank to use data source in main.tf or set AMI id
+image_id        = "" 
 key_name        = "Abbie-key"
 user_data_file  = "../../install_nginx.sh"
