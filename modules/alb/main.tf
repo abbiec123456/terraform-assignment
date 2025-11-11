@@ -26,10 +26,10 @@ resource "aws_lb_listener" "listener" {
   }
 }
 
-# Corrected attachment using toset() so for_each works
 resource "aws_lb_target_group_attachment" "attach" {
-  for_each         = toset(var.web_instance_ids)
+  count            = length(var.web_instance_ids)
   target_group_arn = aws_lb_target_group.tg.arn
-  target_id        = each.value
+  target_id        = var.web_instance_ids[count.index]
   port             = 80
 }
+
