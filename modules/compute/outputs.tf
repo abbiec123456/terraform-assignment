@@ -1,3 +1,3 @@
 output "web_instance_ids" {
-  value = aws_instance.web.*.id
+  value = [for inst in aws_instance.web : inst.id]
 }
