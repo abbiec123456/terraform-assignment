@@ -15,12 +15,17 @@ ALB with listener and target group for distributing traffic
 
 # Steps to do:
 git clone <your-github-repo-url>
+
 cd terraform-assignment/envs/dev
 
 terraform init
+
 terraform validate
+
 terraform plan -var-file=terraform.tfvars
+
 terraform apply -var-file=terraform.tfvars
+
 terraform output
 
 
