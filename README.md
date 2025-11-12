@@ -29,11 +29,11 @@ terraform apply -var-file=terraform.tfvars
 terraform output
 
 
-The deployed web application is accessible via the Application Load Balancer:
+The deployed web application was accessible via the Application Load Balancer:
 link http://abbie-alb-1162377497.eu-west-1.elb.amazonaws.com/
 
 
-# Direct EC2 access:
+# Direct EC2 access was:
 
 EC2 Instance 1: http://34.244.53.233
 
@@ -43,10 +43,6 @@ EC2 Instance 2: http://108.129.213.113
 <h1>Hello from Abbie Coombes - L00196596</h1>
 
 # Best Practices Applied
-
-Modular Terraform code for reusability
-
-Least privilege security rules
 
 Multi-AZ deployment for high availability
 
